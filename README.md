@@ -1,55 +1,59 @@
-# 0x04. Files Manager
+# Files Manager
 
-![Node.js](https://img.shields.io/badge/Node.js-12.x.x-brightgreen)
-![Express.js](https://img.shields.io/badge/Express.js-latest-blue)
-![MongoDB](https://img.shields.io/badge/MongoDB-latest-brightgreen)
-![Redis](https://img.shields.io/badge/Redis-latest-red)
-![Bull](https://img.shields.io/badge/Bull-latest-orange)
+[![Coverage Status](https://coveralls.io/repos/github/B3zaleel/alx-files_manager/badge.svg?branch=main)](https://coveralls.io/github/B3zaleel/alx-files_manager?branch=main)
 
-## Resources
-
-- [Node.js Getting Started](https://nodejs.dev/learn)
-- [Express.js Getting Started](https://expressjs.com/)
-- [Process API Documentation](https://nodejs.org/dist/latest/docs/api/process.html)
-- [Mocha Documentation](https://mochajs.org/)
-- [Nodemon Documentation](https://nodemon.io/)
-- [MongoDB](https://www.mongodb.com/)
-- [Bull](https://optimalbits.github.io/bull/)
-- [Image Thumbnail](https://github.com/oncletom/image-thumbnail)
-- [Mime-Types](https://www.npmjs.com/package/mime-types)
-- [Redis](https://redis.io/)
-
-## Learning Objectives
-
-At the end of this project, you should be able to explain:
-
-- How to create an API with Express
-- How to authenticate a user
-- How to store data in MongoDB
-- How to store temporary data in Redis
-- How to set up and use a background worker
+A simple file management API built with Express, MongoDB, Redis, Bull, and Node.js.
 
 ## Requirements
 
-- Allowed editors: vi, vim, emacs, Visual Studio Code
-- All your files will be interpreted/compiled on Ubuntu 18.04 LTS using Node.js (version 12.x.x)
-- All your files should end with a new line
-- A `README.md` file at the root of the project folder is mandatory
-- Your code should use the `.js` extension
-- Your code will be verified against lint using ESLint
+### Applications
 
-## Provided Files
++ Node.js
++ Yarn (the package manager/resource negotiator)
 
-- `package.json`
-- `.eslintrc.js`
-- `babel.config.js`
+### APIs
+
++ A Google API should be created with at least an email sending scope and a valid URL (e.g.; `http://localhost:5000/`) should be one of the redirect URIs. The `credentials.json` file should be stored in the root directory of this project.
+
+### Environment Variables
+
+The required environment variables should be stored in a file named `.env` and each line should have the format `Name=Value`. The table below lists the environment variables that will be used by this server:
+
+| Name | Required | Description |
+|:-|:-|:-|
+| GOOGLE_MAIL_SENDER | Yes | The email address of the account responsible for sending emails to users. |
+| PORT | No (Default: `5000`)| The port the server should listen at. |
+| DB_HOST | No (Default: `localhost`)| The database host. |
+| DB_PORT | No (Default: `27017`)| The database port. |
+| DB_DATABASE | No (Default: `files_manager`)| The database name. |
+| FOLDER_PATH | No (Default: `/tmp/files_manager` (Linux, Mac OS X) & `%TEMP%/files_manager` (Windows)) | The local folder where files are saved. |
+
+## Installation
+
++ Clone this repository and switch to the cloned repository's directory.
++ Install the packages using `yarn install` or `npm install`.
 
 ## Usage
 
-1. Clone the repository:
+Start the Redis and MongoDB services on your system and run `yarn start-server` or `npm run start-server`.
 
-   ```bash
-   git clone https://github.com/yourusername/your-repository.git
-npm install
-npm start
+## Tests
 
++ Create a separate `.env` file for the tests named `.env.test` and store the value of the environment variables for the testing event in it.
++ Run `yarn test` or `npm run test` to execute the E2E tests.
+
+## Documentation
+
++ TODO: Generate OpenAPI documentation with [**apidoc**](https://www.npmjs.com/package/apidoc).
+
+## RESOURCES
++ [x] [Node JS getting started](https://intranet.alxswe.com/rltoken/8jNm2s_LfVKMqR3vHLn_uw)
++ [x] [Process API doc](https://intranet.alxswe.com/rltoken/uYPplj2cPK8pcP0LtV6RuA)
++ [x] [Express getting started](https://intranet.alxswe.com/rltoken/SujfeWKCWmUMomfETjETEg)
++ [x] [Mocha documentation](https://intranet.alxswe.com/rltoken/FzEwplmoZiyGvkgKllZNJw)
++ [x] [Nodemon documentation](https://intranet.alxswe.com/rltoken/pdNNTX0OLugbhxvP3sLgOw)
++ [x] [MongoDB](https://intranet.alxswe.com/rltoken/g1x7y_3GskzVAJBTXcSjmA)
++ [x] [Bull](https://intranet.alxswe.com/rltoken/NkHBpGrxnd0sK_fDPMbihg)
++ [x] [Image thumbnail](https://intranet.alxswe.com/rltoken/KX6cck2nyLpQOTDMLcwxLg)
++ [x] [Mime-Types](https://intranet.alxswe.com/rltoken/j9B0Kc-4HDKLUe88ShbOjQ)
++ [x] [Redis](https://intranet.alxswe.com/rltoken/nqwKRszO8Tkj_ZWW1EFwGw)      
